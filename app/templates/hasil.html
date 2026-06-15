@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tealeafy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hasil.css') }}">
+</head>
+<body class="bg-hasil">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg custom-nav fixed-top shadow-sm mx-auto mt-3">
+        <div class="container-fluid">
+            <a class="navbar-brand back-text" href="{{ url_for('main.klasifikasi') }}">
+                <i class="fa-solid fa-chevron-left me-2"></i> Kembali
+            </a>
+        </div>
+    </nav>
+
+    <!-- HASIL SECTION -->
+    <section id="hasil-klasifikasi" class="py-5 mt-5">
+        <div class="container pt-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Hasil Klasifikasi Daun Teh</h2>
+                <p class="section-subtitle">Berikut hasil klasifikasi gambar daun teh yang telah diunggah</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="result-card shadow-sm">
+                        <h4 class="result-label">Kondisi Daun</h4>
+                        <p id="kondisi-daun" class="result-value">-</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5">
+                    <div class="result-card shadow-sm">
+                        <h4 class="result-label">Estimasi Waktu Panen</h4>
+                        <p id="estimasi-panen" class="result-value">-</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5">
+                    <div class="result-card shadow-sm">
+                        <h4 class="result-label">Status Kesiapan Panen</h4>
+                        <p id="kesiapan-panen" class="result-value">-</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5">
+                    <div class="result-card shadow-sm">
+                        <h4 class="result-label">Tingkat Akurasi</h4>
+                        <div class="accuracy-detail">
+                            <p>Penyakit: <span id="akurasi-p">-</span></p>
+                            <p>Kesiapan: <span id="akurasi-k">-</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-10">
+                    <div class="description-box shadow-sm mt-4">
+                        <p class="description-text">
+                            <strong>Keterangan:</strong> <span id="keterangan">...</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-10">
+                    <div class="description-box shadow-sm mt-3">
+                        <p class="description-text">
+                            <strong>Penanganan/Pengendalian:</strong>
+                            <span id="penanganan">...</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/hasil.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tealeafy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/artikel.css') }}">
+</head>
+<body class="bg-artikel">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg custom-nav fixed-top shadow-sm mx-auto mt-3">
+        <div class="container-fluid">
+            <a class="navbar-brand back-text" href="{{ url_for('main.index') }}">
+                <i class="fa-solid fa-chevron-left me-2"></i> Kembali
+            </a>
+        </div>
+    </nav>
+
+    <!-- ARTIKEL SECTION -->
+    <section id="artikel-penyakit" class="py-5 mt-5">
+        <div class="container pt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <article class="main-article-card shadow-sm">
+                        <header class="text-center mb-5">
+                            <h1 class="section-title mb-4">Panduan Penentuan Kesiapan Panen pada Daun Teh</h1>
+                            <p class="section-subtitle">Penentuan waktu panen daun teh merupakan faktor krusial yang 
+                                memengaruhi kualitas hasil panen. Pemetikan pada waktu yang tepat dapat menghasilkan mutu teh 
+                                yang lebih optimal. Oleh karena itu, pemahaman terhadap kondisi daun serta fase 
+                                pertumbuhannya menjadi hal penting sebelum menetapkan waktu panen.</p>
+                        </header>
+
+                        <div class="article-body-text">
+                            <!-- Karakteristik Daun Sehat -->
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">Karakteristik Daun Teh Sehat</h4>
+                                <p>Kondisi daun teh yang sehat menjadi indikator dalam menentukan kesiapan panen. Daun teh yang sehat 
+                                    memiliki warna hijau cerah dengan permukaan yang halus dan seragam, tanpa adanya perubahan warna. 
+                                    Teksturnya pun kencang dan padat, tanpa mengindikasikan daun layu ataupun keriting.</p>
+                                <img src="{{ url_for('static', filename='img/healthy.jpg') }}" class="img-content-article" alt="Daun Teh Sehat">
+                            </div>
+
+                            <!-- Fase Pertumbuhan -->
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">Fase Pertumbuhan Daun Teh</h4>
+                                <p>Pertumbuhan daun teh mengikuti siklus berkala yang sangat bergantung pada pemeliharaan dan cuaca. Berikut adalah tahapan fase pertumbuhannya:</p>
+                                <ul>
+                                    <li><strong>Minggu 1 (Kuncup):</strong> Muncul pucuk atau kuncup daun yang masih kecil dan berwarna hijau muda. Pada tahap ini, daun masih sangat 
+                                        muda dan belum siap untuk dipanen.</li>
+                                    <li><strong>Minggu 2 (P+1):</strong> Kuncup dengan satu daun muda, di mana daun mulai membuka dan berkembang. Ukuran daun bertambah serta warna 
+                                        hijau mulai terlihat lebih jelas. Daun masih dalam tahap pertumbuhan aktif.</li>
+                                    <li><strong>Minggu 3 (P+2):</strong> Kuncup dengan dua daun muda dibawahnya. Biasanya daun sudah berkembang dengan tekstur lebih kuat. Pada tahap 
+                                        ini, daun mulai mendekati kondisi optimal untuk dipanen.</li>
+                                    <li><strong>Minggu 4 (P+3):</strong> Kuncup dengan tiga daun muda di bawahnya yang telah berkembang dengan baik. Ukuran dan bentuk sudah sempurna 
+                                        serta siap untuk dipanen guna mendapatkan kualitas terbaik.</li>
+                                </ul>
+                                <div class="row g-3 fase-grid pull-up justify-content-center">
+                                    <div class="col-12 col-md-6">
+                                        <div class="fase-item text-center">
+                                            <img src="{{ url_for('static', filename='img/minggu1.jpg') }}" class="img-fase" alt="Minggu 1">
+                                            <p class="fase-label">Minggu 1 (Kuncup)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="fase-item text-center">
+                                            <img src="{{ url_for('static', filename='img/minggu2.jpg') }}" class="img-fase" alt="Minggu 2">
+                                            <p class="fase-label">Minggu 2 (P+1)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="fase-item text-center">
+                                            <img src="{{ url_for('static', filename='img/minggu3.jpg') }}" class="img-fase" alt="Minggu 3">
+                                            <p class="fase-label">Minggu 3 (P+2)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="fase-item text-center">
+                                            <img src="{{ url_for('static', filename='img/minggu4.jpg') }}" class="img-fase" alt="Minggu 4">
+                                            <p class="fase-label">Minggu 4 (P+3)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Kesimpulan -->
+                            <div class="item-penyakit">
+                                <h4 class="text-success">Waktu Panen Optimal</h4>
+                                <p>Secara umum, daun teh dapat dipanen sekitar 30 hari berdasarkan sistem gilir petik. Ketepatan dalam menentukan waktu panen menjadi faktor penting dalam menjaga mutu daun teh serta meningkatkan hasil produksi. Selain itu, waktu pemetikan 
+                                    juga perlu diperhatikan. Pemetikan daun teh umumnya dilakukan pada pagi hari, yaitu sekitar pukul 05.00–09.00 dan dapat dilanjutkan pada pukul 10.00–12.00. 
+                                    Pada rentang waktu tersebut, kondisi lingkungan masih relatif baik dan belum banyak terpapar polusi, sehingga kualitas daun teh yang dipanen dapat tetap terjaga.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+app/uploads/*
+!app/uploads/.gitkeep
+
+app/models/model.h5
+app/models/model.keras
+app/models/model3.keras
+app/models/saved_model2/
+
+__pycache__/
+*.pyc
+
+.ipynb_checkpoints/
+
+data/
+notebooks/

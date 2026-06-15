@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tealeafy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/artikel.css') }}">
+</head>
+<body class="bg-artikel">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg custom-nav fixed-top shadow-sm mx-auto mt-3">
+        <div class="container-fluid">
+            <a class="navbar-brand back-text" href="{{ url_for('main.index') }}">
+                <i class="fa-solid fa-chevron-left me-2"></i> Kembali
+            </a>
+        </div>
+    </nav>
+
+    <!-- ARTIKEL SECTION -->
+    <section id="artikel-penyakit" class="py-5 mt-5">
+        <div class="container pt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <article class="main-article-card shadow-sm">
+                        <header class="mb-5">
+                            <h1 class="section-title mb-4">Yuk, Kenali 7 Penyakit Pada Daun Teh</h1>
+                            <p class="section-subtitle">Serangan penyakit pada daun teh berpotensi menurunkan kualitas dan hasil produksi, sehingga penting untuk melakukan deteksi sejak dini 
+                                guna menghindari kerusakan yang semakin meluas. Beberapa penyakit yang menyerang daun teh seperti:</p>
+                        </header>
+                        <div class="article-body-text">
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">1. Blister Blight</h4>
+                                <p>Blister Blight merupakan penyakit cacar daun yang disebabkan oleh jamur <em>Exobasidium vexans</em>. Penyakit ini ditandai dengan munculnya bintik-bintik 
+                                    berwarna yang kontras dengan warna hijau daun teh. Pada tingkat serangan tertentu, daun akan menggulung secara tidak beraturan disertai perkembangan lesi 
+                                    lepuh yang meluas hingga tulang daun tengah dan bagian tepi daun teh.</p>
+                                <img src="{{ url_for('static', filename='img/blisterblight.jpg') }}" class="img-content-article" alt="Blister Blight">
+                            </div>
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">2. Gray Blight</h4>
+                                <p>Gray Blight atau hawar abu-abu disebabkan oleh patogen bernama <em>Pestalotiopsis thedae</em>. Gejalanya ditandai dengan munculnya bercak berwarna cokelat pada bagian 
+                                    tengah daun. Pada tahap selanjutnya, bercak tersebut berubah menjadi abu-abu dengan tepian cokelat dan menyebar pada permukaan daun sehingga mengakibatkan kerusakan 
+                                    pada tunas muda yang sedang tumbuh.</p>
+                                <img src="{{ url_for('static', filename='img/grayblight.jpg') }}" class="img-content-article" alt="Gray Blight">
+                            </div>
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">3. Brown Blight</h4>
+                                <p>Brown Blight disebabkan oleh jamur <em>Pestalotiopsis sp</em>. Gejala penyakit ini ditandai dengan munculnya bintik-bintik kecil berwarna hijau kekuningan yang kemudian 
+                                    menyebar dan berkembang menjadi lesi berwarna cokelat gelap dengan adanya pola cincin konsentris. Bintik-bintik ini kemudian menyebar dari tepi ke tengah daun, membentuk 
+                                    warna hitam, dan saling menyatu.</p>
+                                <img src="{{ url_for('static', filename='img/brownblight.jpg') }}" class="img-content-article" alt="Brown Blight">
+                            </div>
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">4. Algal Leaf Spot</h4>
+                                <p>Algal Leaf Spot atau bercak daun alga yang disebabkan oleh alga bernama <em>Chephaleuros virescens</em>. Penyakit ini ditandai dengan munculnya bercak cokelat tidak beraturan 
+                                    pada daun. Lesi tersebut dapat berkembang hingga 10 mm, dengan bagian tengah berwarna abu-abu dan tepi cokelat gelap. Gejala lain dapat berupa bercak cokelat berbentuk lingkaran 
+                                    maupun bentuk tidak beraturan, di mana pada tahap awal ditandai dengan perubahan warna daun menjadi kekuningan.</p>
+                                <img src="{{ url_for('static', filename='img/algalspot.jpg') }}" class="img-content-article" alt="Algal Leaf Spot">
+                            </div>
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">5. Red Spider Mite</h4>
+                                <p>Red Spider Mite atau tungau merah disebabkan oleh <em>Oligonychus coffeae</em>, yaitu salah satu hama pengisap pada tanaman teh. Kerusakan akibat aktivitas makan pada fase larva, 
+                                    nimfa, dan dewasa mengakibatkan permukaan daun mengalami perubahan menjadi merah kecokelatan. Serangan ini dapat mengakibatkan penurunan fotosintetis daun yang menyebabkan daun 
+                                    menjadi layu, rontok, hingga mengering.</p>
+                                <img src="{{ url_for('static', filename='img/redspidermite.jpg') }}" class="img-content-article" alt="Red Spider Mite">
+                            </div>
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">6. Red Rust</h4>
+                                <p>Red Rust atau karat merah disebabkan oleh alga hijau yang bernama <em>Cephaleuros parasiticus Karst</em>. Patogen ini dapat menyebar melalui angin serta percikan air memicu 
+                                    adanya bintik-bintik pada daun. Bintik-bintik tersebut dapat muncul dalam jumlah yang banyak atau sedikit, baik secara bergerombol maupun tersebar di permukaan daun.</p>
+                                <img src="{{ url_for('static', filename='img/redrust.jpg') }}" class="img-content-article" alt="Red Rust">
+                            </div>
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">7. Helopeltis</h4>
+                                <p>Helopeltis atau dapat disebut sebagai kepik penghisap daun adalah salah satu penyakit pada daun teh yang biasanya menyerang daun muda. Kepik ini menyerang daun 
+                                    teh dengan cara menusuk dan mengisap, mengakibatkan munculnya bercak-bercak hitam. Bercak tersebut akan mengering sehingga menyebabkan jaringan tanaman yang terinfeksi akan mengalami kematian.</p>
+                                <img src="{{ url_for('static', filename='img/helopeltis.jpg') }}" class="img-content-article" alt="Helopeltis">
+                            </div>
+                            
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

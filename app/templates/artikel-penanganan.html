@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tealeafy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/artikel.css') }}">
+</head>
+<body class="bg-artikel">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg custom-nav fixed-top shadow-sm mx-auto mt-3">
+        <div class="container-fluid">
+            <a class="navbar-brand back-text" href="{{ url_for('main.index') }}">
+                <i class="fa-solid fa-chevron-left me-2"></i> Kembali
+            </a>
+        </div>
+    </nav>
+
+    <section id="artikel-penyakit" class="py-5 mt-5">
+        <div class="container pt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <article class="main-article-card shadow-sm">
+                        <header class="text-center mb-5">
+                            <h1 class="section-title mb-4">Cara Pengelolaan Penyakit Daun Teh</h1>
+                            <p class="section-subtitle">Pengelolaan penyakit dan hama daun teh perlu dilakukan secara tepat melalui pemantauan rutin dan pengendalian yang sesuai.</p>
+                        </header>
+
+                        <div class="article-body-text">
+                            <!-- Bagian Pemantauan -->
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">1. Pemantauan Rutin</h4>
+                                <p>Pemantauan kondisi daun teh secara rutin sangat penting untuk mendeteksi gejala awal serangan hama atau penyakit, seperti perubahan warna, munculnya bercak, serta adanya lubang atau kerusakan pada daun. Keberadaan hama dewasa yang terlihat secara langsung juga menjadi tanda potensi serangan yang lebih besar di area perkebunan.</p>
+                            </div>
+
+                            <!-- Pengendalian Kultural -->
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">2. Pengendalian Kultural</h4>
+                                <p>Metode ini berfokus pada praktik budidaya untuk menekan risiko serangan, meliputi:</p>
+                                <ul>
+                                    <li><strong>Optimalisasi Tanaman:</strong> Menjaga kondisi tanaman agar tetap tumbuh optimal melalui pengaturan naungan dan penyiraman yang tepat.</li>
+                                    <li><strong>Sanitasi:</strong> Membuang atau memusnahkan bagian tanaman yang telah terinfeksi agar tidak menular ke tanaman lain.</li>
+                                    <li><strong>Ekosistem:</strong> Mendorong keberadaan predator alami di sekitar kebun untuk membantu mengendalikan populasi hama secara mandiri.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Pengendalian Hayati -->
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">3. Pengendalian Hayati (Alami)</h4>
+                                <p>Pengendalian ini memanfaatkan organisme atau bahan alami untuk mengatasi masalah tanpa merusak lingkungan, di antaranya:</p>
+                                <ul>
+                                    <li><strong>Zat Alami:</strong> Penggunaan bahan seperti minyak nimba untuk mengendalikan hama tertentu.</li>
+                                    <li><strong>Mikroorganisme:</strong> Pemanfaatan bakteri atau jamur baik yang mampu melawan patogen hama.</li>
+                                    <li><strong>Serangga Predator:</strong> Melepaskan serangga yang secara alami memangsa hama tanaman teh.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Pestisida Kimia -->
+                            <div class="item-penyakit mb-5">
+                                <h4 class="text-success">4. Penggunaan Pestisida Kimia</h4>
+                                <p>Pestisida kimia hanya digunakan sebagai pilihan terakhir jika metode alami tidak lagi efektif. Penggunaannya wajib mengikuti dosis dan anjuran yang berlaku serta sangat disarankan untuk menerapkan Pengelolaan Hama Terpadu (PHT) guna meminimalkan dampak terhadap kesehatan dan lingkungan.</p>
+                            </div>
+
+                            <!-- Sumber Referensi -->
+                            <div class="mt-5 pt-4 border-top">
+                                <p class="text-muted small">
+                                    <strong>Sumber:</strong><br>
+                                    BioProtection Portal. <em>Hama teh: Identifikasi, kerusakan, dan manajemen yang efektif.</em> 
+                                    <a href="https://bioprotectionportal.com/id/resources/tea-pests-identification-damage-and-effective-management/"target="_blank" class="text-decoration-none sumber-link">
+                                        https://bioprotectionportal.com/id/resources/tea-pests-identification-damage-and-effective-management/</a>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

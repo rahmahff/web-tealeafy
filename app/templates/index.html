@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tealeafy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="150">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg custom-nav fixed-top shadow-sm mx-auto mt-3">
+        <div class="container-fluid">
+            <a class="navbar-brand brand-text" href="#beranda">Tealeafy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link px-3" href="#beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#informasi">Informasi</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#panduan">Panduan</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#artikel">Artikel</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="hero-section">
+        <div class="container">
+            <div class="row content-wrapper align-items-center">
+                <div class="col-lg-7 text-white px-3 px-lg-4">
+                    <h1 class="display-4 mb-4 hero-title">Ketahui Kondisi Daun Teh dengan Mudah</h1>
+                    <p class="lead mb-5 hero-subtitle">
+                        Sistem berbasis kecerdasan buatan untuk mengidentifikasi penyakit daun teh, 
+                        menentukan kesiapan panen, serta memprediksi waktu panen melalui analisis citra daun teh.
+                    </p>
+                    <a href="{{ url_for('main.klasifikasi') }}" class="btn btn-custom btn-lg shadow">Mulai Analisis Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMASI SECTION -->
+    <section id="informasi" class="info-section py-5">
+        <div class="container text-center">
+            <h2 class="mb-2 section-title">Pentingnya Analisis pada Daun Teh</h2>
+            <p class="mb-5 section-subtitle">Membantu mengetahui kondisi daun teh untuk menjaga kualitas yang lebih baik</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card info-card shadow-sm border-0">
+                        <div class="card-body p-4 text-start">
+                            <div class="icon-wrapper mb-3"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <h4>Mengenali Penyakit</h4>
+                            <p>Mengenali penyakit pada daun teh sejak awal dapat membantu dalam mencegah terjadinya penyebaran yang lebih luas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card info-card shadow-sm border-0">
+                        <div class="card-body p-4 text-start">
+                            <div class="icon-wrapper mb-3"><i class="fa-solid fa-leaf"></i></div>
+                            <h4>Menentukan Kesiapan Panen</h4>
+                            <p>Membantu dalam mengetahui daun teh berada dalam kondisi sudah siap untuk dipanen atau belum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card info-card shadow-sm border-0">
+                        <div class="card-body p-4 text-start">
+                            <div class="icon-wrapper mb-3"><i class="fa-solid fa-calendar"></i></div>
+                            <h4>Estimasi Waktu Panen</h4>
+                            <p>Dapat memperkirakan kapan waktu panen daun teh sehingga dapat memperoleh hasil panen yang optimal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANDUAN SECTION -->
+    <section id="panduan" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title mb-2">Panduan Penggunaan</h2>
+            <p class="section-subtitle mb-5">Langkah-langkah menggunakan Tealeafy</p>
+            <div class="row g-4 justify-content-center mt-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card guide-card border-0 shadow-sm h-100">
+                        <div class="step-number shadow">01</div>
+                        <div class="card-body p-4 pt-5">
+                            <h4>Akses Halaman Klasifikasi</h4>
+                            <p>Tekan tombol "Mulai Analisis Sekarang" pada halaman utama untuk menuju ke halaman klasifikasi daun teh.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card guide-card border-0 shadow-sm h-100">
+                        <div class="step-number shadow">02</div>
+                        <div class="card-body p-4 pt-5">
+                            <h4>Unggah Gambar Daun Teh</h4>
+                            <p>Tekan bagian "Klik untuk Menggungah Gambar", kemudian pilih opsi sumber gambar, baik melalui unggah gambar
+                                dari perangkat atau ambil foto secara langsung menggunakan kamera. Pastikan daun teh terlihat jelas dan tidak
+                                tertutupi oleh objek lain.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card guide-card border-0 shadow-sm h-100">
+                        <div class="step-number shadow">03</div>
+                        <div class="card-body p-4 pt-5">
+                            <h4>Mulai Analisis</h4>
+                            <p>Setelah gambar berhasil diunggah, tekan tombol "Klasifikasi Gambar", lalu pilih tombol "Lanjutkan Klasifikasi". Sistem akan melakukan
+                                analisis gambar daun teh secara otomatis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card guide-card border-0 shadow-sm h-100">
+                        <div class="step-number shadow">04</div>
+                        <div class="card-body p-4 pt-5">
+                            <h4>Lihat Hasil Analisis</h4>
+                            <p>Sistem akan secara otomatis menampilkan halaman hasil dengan menyajikan keluaran
+                                berupa kondisi daun, status kesiapan panen, estimasi waktu panen, tingkat akurasi, keterangan, serta informasi penanganan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTIKEL SECTION -->
+    <section id="artikel" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title mb-2">Informasi Seputar Daun Teh</h2>
+            <p class="section-subtitle mb-5">Temukan informasi terkait penyakit, cara penanganan, dan tips panen daun teh</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card article-card border-0 shadow-sm">
+                        <img src="{{ url_for('static', filename='img/artikelpenyakit.jpeg') }}" class="card-img-top">
+                        <div class="card-body p-4 text-center">
+                            <h5 class="mb-4 article-title">Yuk, Kenali 7 Penyakit Pada Daun Teh</h5>
+                            <a href="{{ url_for('main.artikel_penyakit') }}" class="article-link">
+                                Baca Selengkapnya <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card article-card border-0 shadow-sm">
+                        <img src="{{ url_for('static', filename='img/artikelkesiapan.jpeg') }}" class="card-img-top">
+                        <div class="card-body p-4 text-center">
+                            <h5 class="mb-4 article-title">Penentuan Kesiapan Panen Pada Daun Teh</h5>
+                            <a href="{{ url_for('main.artikel_kesiapan') }}" class="article-link">
+                                Baca Selengkapnya <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card article-card border-0 shadow-sm">
+                        <img src="{{ url_for('static', filename='img/penanganan.jpg') }}" class="card-img-top">
+                        <div class="card-body p-4 text-center">
+                            <h5 class="mb-4 article-title">Cara Pengelolaan Penyakit Daun Teh</h5>
+                            <a href="{{ url_for('main.artikel_penanganan') }}" class="article-link">
+                                Baca Selengkapnya <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="custom-footer py-3 text-center">
+        <div class="container">
+            <p class="mb-0 footer-text">&copy; 2026 Tealeafy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+</body>
+</html>
